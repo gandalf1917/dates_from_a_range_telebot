@@ -46,7 +46,7 @@ def start(message):
 def setup_message(message):
     chat_id = message.chat.id
     user_data[chat_id] = {}
-    bot.send_message(chat_id, "Введите start_date (в формате DD.MM.YY):")
+    bot.send_message(chat_id, "Введите start_date (в формате DD.MM.YYYY):")
 
 
 @bot.message_handler(commands=['target_weekday'])
@@ -63,7 +63,7 @@ def handle_message(message):
         user_info = user_data[chat_id]
         if "start_date" not in user_info:
             user_info["start_date"] = message.text
-            bot.send_message(chat_id, "Введите end_date (в формате DD.MM.YY):")
+            bot.send_message(chat_id, "Введите end_date (в формате DD.MM.YYYY):")
         elif "end_date" not in user_info:
             user_info["end_date"] = message.text
             bot.send_message(chat_id, "Введите номер дня недели (0 - Пн, 1 - Вт, ..., 6 - Вс):")
