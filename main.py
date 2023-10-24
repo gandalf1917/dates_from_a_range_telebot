@@ -28,7 +28,7 @@ def find_weekday_dates(start_date, end_date, target_weekday):
     return result_dates
 
 
-bot = telebot.TeleBot("6324446132:AAH2b36LRIOYyrXlj5OH_vN2uGNme_SIBYs")
+bot = telebot.TeleBot("Yor token")
 
 #  хранение данных
 user_data = {}
